@@ -15,7 +15,7 @@ Terrestrial Ecosystems (ETE) Program database.
 You can install the released version of ete from GitHub with:
 
 ``` r
-devtools::install_github("smithsonian/ete")
+devtools::install_github("smithsonian/ete_rpackage")
 ```
 
 ## Example
