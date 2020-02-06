@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ete
+# ETERnity
 
 <!-- badges: start -->
 
@@ -15,7 +15,7 @@ Terrestrial Ecosystems (ETE) Program database.
 You can install the released version of ete from GitHub with:
 
 ``` r
-devtools::install_github("smithsonian/ete_rpackage")
+devtools::install_github("smithsonian/ETERnity")
 ```
 
 ## Example
@@ -23,6 +23,6 @@ devtools::install_github("smithsonian/ete_rpackage")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(ete)
+library(ETERnity)
 ## basic example code
 ```
