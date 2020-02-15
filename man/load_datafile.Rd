@@ -31,6 +31,6 @@ does checking for whether a particular datafile exists and then
 }
 \examples{
 \donttest{
-rodent_species <- load_datafile("Rodents/Portal_rodent_species.csv")
+species_df <- load_datafile("ETE/species.csv")
 }
 }

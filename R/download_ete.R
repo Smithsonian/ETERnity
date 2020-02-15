@@ -1,3 +1,8 @@
+#' The functions full_path, download_ete, get_data_versions,
+#' check_default_data_path, and use_default_data_path were all borrowed
+#' heavily from https://github.com/weecology/portalr/blob/master/R/download_data.R,
+#' with permission of the portalr maintainers.
+
 #' @title Full Path
 #' @description Return normalized path for all operating systems
 #' @param reference_path a path to join with current working directory
@@ -6,8 +11,8 @@
 #' @return Full path
 #'
 #' @examples
-#' full_path('PortalData/Rodents/Portal_rodent.csv')
-#' full_path('PortalData/Rodents/Portal_rodent.csv', '~')
+#' full_path('ETEData/occurrence.csv')
+#' full_path('ETEData/occurrence.csv', '~')
 #'
 #' @noRd
 full_path <- function(reference_path, base_path = getwd()) {
@@ -16,21 +21,19 @@ full_path <- function(reference_path, base_path = getwd()) {
   return(path)
 }
 
-#' @title Download the PortalData repo
+#' @title Download the ETE data
 #'
-#' @description This downloads the latest portal data regardless if they are
+#' @description This downloads the latest ETE data regardless if they are
 #'   actually updated or not.
 #' @param path Folder into which data will be downloaded
 #' @param version Version of the data to download (default = "latest")
 #' @param quiet logical, whether to download data silently
-#' @inheritParams get_data_versions
 #'
 #' @return None
 #'
 #' @examples
 #' \donttest{
-#'   download_observations()
-#'   download_observations("~/old-data", version = "1.50.0")
+#'   download_ete()
 #' }
 #'
 #' @export
@@ -91,12 +94,11 @@ download_ete <- function(path = get_default_data_path(),
   file.remove(zip_download_dest)
 }
 
-#' @title get version and download info for PortalData
+#' @title get version and download info for ETE data
 #'
-#' @description Check either Zenodo or GitHub for the version and download link
-#'   for PortalData.
+#' @description Check FigShare for the version and download link
+#'   for ETE. This is fake for now, since we only have 1 version.
 #'
-#' @param from_zenodo logical; if `TRUE`, get info from Zenodo, otherwise GitHub
 #' @param halt_on_error logical; if `FALSE`, return NULL on errors, otherwise
 #'   whatever got returned (could be an error or warning)
 #' @return A data.frame with two columns, `version` (string with the version #) and

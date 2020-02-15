@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_ete.R
 \name{download_ete}
 \alias{download_ete}
-\title{Download the PortalData repo}
+\title{Download the ETE data}
 \usage{
 download_ete(path = get_default_data_path(), version = "latest", quiet = FALSE)
 }
@@ -17,13 +17,12 @@ download_ete(path = get_default_data_path(), version = "latest", quiet = FALSE)
 None
 }
 \description{
-This downloads the latest portal data regardless if they are
+This downloads the latest ETE data regardless if they are
   actually updated or not.
 }
 \examples{
 \donttest{
-  download_observations()
-  download_observations("~/old-data", version = "1.50.0")
+  download_ete()
 }
 
 }

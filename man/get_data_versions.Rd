@@ -2,13 +2,11 @@
 % Please edit documentation in R/download_ete.R
 \name{get_data_versions}
 \alias{get_data_versions}
-\title{get version and download info for PortalData}
+\title{get version and download info for ETE data}
 \usage{
 get_data_versions()
 }
 \arguments{
-\item{from_zenodo}{logical; if `TRUE`, get info from Zenodo, otherwise GitHub}
-
 \item{halt_on_error}{logical; if `FALSE`, return NULL on errors, otherwise
 whatever got returned (could be an error or warning)}
 }
@@ -17,6 +15,6 @@ A data.frame with two columns, `version` (string with the version #) and
   `zipball_url` (download URLs for the corresponding zipped release).
 }
 \description{
-Check either Zenodo or GitHub for the version and download link
-  for PortalData.
+Check FigShare for the version and download link
+  for ETE. This is fake for now, since we only have 1 version.
 }

@@ -1,5 +1,9 @@
+#' The functions load_ete_data and load_datafile were both borrowed
+#' heavily from https://github.com/weecology/portalr/blob/master/R/load_data.R,
+#' with permission of the portalr maintainers.
+
 #' @rdname load_ete_data
-#' @description \code{\link{load_trapping_data}} loads just the rodent trapping files
+#' @description loads the ETE data files
 #'
 #' @return \code{\link{load_ete_data}} returns a list of 6 dataframes:
 #'   \tabular{ll}{
@@ -47,12 +51,11 @@ load_ete_data <- function(path = get_default_data_path(),
 #'
 #' @param datafile the path to the datafile within the folder for Portal data
 #' @param quiet logical, whether to perform operations silently
-#' @inheritParams load_rodent_data
 #' @inheritParams utils::read.table
 #'
 #' @examples
 #' \donttest{
-#' rodent_species <- load_datafile("Rodents/Portal_rodent_species.csv")
+#' species_df <- load_datafile("ETE/species.csv")
 #' }
 #' @export
 load_datafile <- function(datafile, na.strings = "", path = get_default_data_path(),

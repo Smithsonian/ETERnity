@@ -15,8 +15,8 @@
 
 getlatlon <- function(data_tables, provider_name) {
   sites <- data_tables$dataset_table %>%
-                left_join(data_tables$sites_table, by="datasetname") %>%
-                filter(provider == provider_name) %>%
-                select(sitekey, sitename, latitude, longitude)
+                dplyr::left_join(data_tables$sites_table, by="datasetname") %>%
+                dplyr::filter(provider == provider_name) %>%
+                dplyr::select(sitekey, sitename, latitude, longitude)
   return(sites)
 }
