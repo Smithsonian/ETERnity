@@ -18,4 +18,5 @@ Suggests:
 VignetteBuilder: knitr
 Imports: 
     dplyr,
-    magrittr
+    magrittr,
+    reshape2

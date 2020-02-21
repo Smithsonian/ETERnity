@@ -20,6 +20,8 @@ devtools::install_github("smithsonian/ETERnity")
 
 ## Examples
 
+### Loading ETE Data
+
 The first step to using ETERnity is to load the library, and then use
 the `load_ete_data` function to donwload the latest verion of ETE data
 from Figshare, and load it into 6 tables.
@@ -39,6 +41,14 @@ names(data_tables)
 #> [1] "dataset_table"      "occurrence_table"   "sites_table"        "sitetrait_table"   
 #> [5] "species_table"      "speciestrait_table"
 ```
+
+### User Functions
+
+We have created a suite of user functions that allow you to pull data
+out of the ETE tables by provider. You can pull out yours or anyone
+else’s.
+
+**geteteoccur(provider)**: Get your occurrence table in long format.
 
 ## Citation
 
