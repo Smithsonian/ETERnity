@@ -8,7 +8,7 @@
 #'
 #' @examples
 #' \donttest{
-#'   wing_sites <- getlatlon(dataset_tables, 'Wing')
+#'   wing_sites <- getlatlon(data_tables, 'Wing')
 #' }
 #'
 #' @export
@@ -31,7 +31,7 @@ getlatlon <- function(data_tables, provider_name) {
 #'
 #' @examples
 #' \donttest{
-#'   amatangelo_occur <- geteteoccur(dataset_tables, 'Amatangelo')
+#'   amatangelo_occur <- geteteoccur(data_tables, 'Amatangelo')
 #' }
 #'
 #' @export
@@ -58,7 +58,7 @@ geteteoccur <- function(data_tables, provider_name) {
 #'
 #' @examples
 #' \donttest{
-#'   occur <- geteteoccurDataset(dataset_tables, 'Amatan_WI_Pla_Mod')
+#'   occur <- geteteoccurDataset(data_tables, 'Amatan_WI_Pla_Mod')
 #' }
 #'
 #' @export
@@ -163,5 +163,5 @@ getspptraits <- function(data_tables, provider_name) {
     dplyr::left_join(data_tables$dataset_table, by="datasetname") %>%
     dplyr::filter(provider == provider_name) %>%
     dplyr::select(speciesid, traitname, numvalue, discvalue)
-  return(sitetraits)
+  return(spptraits)
 }

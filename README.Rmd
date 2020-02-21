@@ -35,7 +35,7 @@ The first step to using ETERnity is to load the library, and then use
 the `load_ete_data` function to donwload the latest verion of ETE data
 from Figshare, and load it into 6 tables.
 
-```{r eval=FALSE}
+```{r example}
 library(ETERnity)
 
 data_tables <- load_ete_data(download_if_missing = TRUE)
@@ -47,8 +47,6 @@ data_tables <- load_ete_data(download_if_missing = TRUE)
 #> Unzipping file to /Users/[username]/.ete...
 
 names(data_tables)
-#> [1] "dataset_table"      "occurrence_table"   "sites_table"        "sitetrait_table"   
-#> [5] "species_table"      "speciestrait_table"
 
 ```
 
@@ -57,9 +55,46 @@ names(data_tables)
 We have created a suite of user functions that allow you to pull data out of the ETE tables by provider. You can pull out yours or anyone else's.
 
 **geteteoccur(provider)**: Get your occurrence table in long format.
+```{r geteteoccur}
+amatangelo_occur <- geteteoccur(data_tables, 'Amatangelo')
+head(amatangelo_occur)
+```
 
+**geteteoccurDataset(dataset)**: Get your occurrence table in long format for one timebin
+```{r geteteoccurDataset}
+amatan_wi_occur <- geteteoccurDataset(data_tables, 'Amatan_WI_Pla_Hist')
+head(amatan_wi_occur)
+```
 
+**unmelt2specXsite(table)**: Put your occurrence table in P/A matrix format
+```{r unmelt2specXsite}
+PAtable <- unmelt2specXsite(amatan_wi_occur)
+#> Need to figure out a clean way to subset this output
+```
 
+**getlatlon(provider)**: Get a list of your sites and their coordinates
+```{r getlatlon}
+wing_sites <- getlatlon(data_tables, 'Wing')
+head(wing_sites)
+```
+
+**getages(provider)**: Get a list of your sites and their ages
+```{r getages}
+ages <- getages(data_tables, "Behrensmeyer1")
+head(ages)
+```
+
+**getsitetraits(provider)**: Get your site traits matrix
+```{r getsitetraits}
+sitetraits <- getsitetraits(data_tables, "Blois")
+head(sitetraits)
+```
+
+**getspptraits(provider)**: Get your species trait matrix
+```{r getspptraits}
+spptraits <- getspptraits(data_tables,"Lyons")
+head(spptraits)
+```
 
 ## Citation
 
