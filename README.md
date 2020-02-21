@@ -20,7 +20,9 @@ devtools::install_github("smithsonian/ETERnity")
 
 ## Examples
 
-This is a basic example which shows you how to solve a common problem:
+The first step to using ETERnity is to load the library, and then use
+the `load_ete_data` function to donwload the latest verion of ETE data
+from Figshare, and load it into 6 tables.
 
 ``` r
 library(ETERnity)
@@ -34,15 +36,13 @@ data_tables <- load_ete_data(download_if_missing = TRUE)
 #> Unzipping file to /Users/[username]/.ete...
 
 names(data_tables)
-#> [1] "dataset_table"      "occurrence_table"   "sites_table"       
-#> [4] "sitetrait_table"    "species_table"      "speciestrait_table"
 #> [1] "dataset_table"      "occurrence_table"   "sites_table"        "sitetrait_table"   
 #> [5] "species_table"      "speciestrait_table"
 ```
 
 ## Citation
 
-If you use the eteRnity package, please cite accordingly:
+If you use the ETERnity package, please cite accordingly:
 
 ## Attribution
 
