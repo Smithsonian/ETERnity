@@ -96,7 +96,19 @@ format
 
 ``` r
 PAtable <- unmelt2specXsite(amatan_wi_occur)
-#> Need to figure out a clean way to subset this output
+PAtable[1:5,1:5]
+#>        Amatan_1_60 Amatan_10_60 Amatan_1000_60 Amatan_1002_60
+#> ABIBAL         NaN          NaN            NaN            NaN
+#> ACENEG           0            0              0              0
+#> ACERUB           0            0              0              1
+#> ACESAC          11           11             37              0
+#> ACESPI         NaN          NaN            NaN            NaN
+#>        Amatan_1003_60
+#> ABIBAL            NaN
+#> ACENEG              0
+#> ACERUB              0
+#> ACESAC              0
+#> ACESPI            NaN
 ```
 
 **getlatlon(provider)**: Get a list of your sites and their coordinates

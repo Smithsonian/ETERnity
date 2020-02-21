@@ -69,7 +69,7 @@ head(amatan_wi_occur)
 **unmelt2specXsite(table)**: Put your occurrence table in P/A matrix format
 ```{r unmelt2specXsite}
 PAtable <- unmelt2specXsite(amatan_wi_occur)
-#> Need to figure out a clean way to subset this output
+PAtable[1:5,1:5]
 ```
 
 **getlatlon(provider)**: Get a list of your sites and their coordinates
