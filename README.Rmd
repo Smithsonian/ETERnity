@@ -32,7 +32,7 @@ devtools::install_github("smithsonian/ETERnity")
 ### Loading ETE Data
 
 The first step to using ETERnity is to load the library, and then use
-the `load_ete_data` function to donwload the latest verion of ETE data
+the `load_ete_data` function to download the latest verion of ETE data
 from Figshare, and load it into 6 tables.
 
 ```{r example}
